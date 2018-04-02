@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>LargeDictionary</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="starter-template.css" rel="stylesheet"> -->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>                        
+					</button>
+					<a class="navbar-brand" href="main.html">БольшойСловарь</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Словарь <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="dictionary.html">Словарь</a></li>
+								<li><a href="learnset.html">Наборы</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Книги <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="books.html">Книги</a></li>
+								<li><a href="editbook.html">Добавить книгу</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> Меню <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Настройки</a></li>
+								<li><a href="#">Выход</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+    <div class="container-fluid">    
+			<div class="row content">
+				<!-- Отступ слева -->
+				<div class="col-sm-2 sidenav">
+				</div>
+				<!-- Основной столбец -->
+				<div class="col-sm-5 text-left"> 
+					<div class="panel-group">
+						<div class="panel panel-success">
+							<div class="panel-heading">НАБОРЫ</div>
+							<div class="panel-body">
+								<div class="list-group">
+								
+									<a class="list-group-item" href="#">
+										<div class="row">
+											<div class="col-sm-10">Все слова</div>
+											<div class="col-sm-2 text-right">2500 0</div>
+										</div>
+									</a>
+
+									<a class="list-group-item" href="#">
+										<div class="row">
+											<div class="col-sm-10">Неправильные глаголы</div>
+											<div class="col-sm-2 text-right">120 15</div>
+										</div>
+									</a>
+
+									<a class="list-group-item" href="#">
+										<div class="row">
+											<div class="col-sm-10">Порядковые числительные</div>
+											<div class="col-sm-2 text-right">25 0</div>
+										</div>
+									</a>
+
+									<a class="list-group-item" href="#">
+										<div class="row">
+											<div class="col-sm-10">Сининимы</div>
+											<div class="col-sm-2 text-right">350 10</div>
+										</div>
+									</a>
+									
+								</div>
+							</div>
+						</div>
+						
+						<div class="panel panel-success">
+							<div class="panel-heading">НЕПРОЧИТАННЫЕ КНИГИ</div>
+							<div class="panel-body">
+								<div class="list-group">
+								
+									<a class="list-group-item" href="#">
+										<div class="media">
+											<div class="media-left">
+												<img src="img/JAVA.png" class="media-object" style="width:60px">
+											</div>
+											<div class="media-body">
+												<h4 class="media-heading">Java learn</h4>
+												<p>Basic java </p>
+											</div>
+										</div>
+									</a>
+
+									<a class="list-group-item" href="#">
+										<div class="media">
+											<div class="media-left">
+												<img src="img/red-book.png" class="media-object" style="width:60px">
+											</div>
+											<div class="media-body">
+												<h4 class="media-heading">SQL learn</h4>
+												<p>Basic SQL </p>
+											</div>
+										</div>
+									</a>
+									
+									<a class="list-group-item" href="#">
+										<div class="media">
+											<div class="media-left">
+												<img src="img/red-book.png" class="media-object" style="width:60px">
+											</div>
+											<div class="media-body">
+												<h4 class="media-heading">Linux learn</h4>
+												<p>Basic linux </p>
+											</div>
+										</div>
+									</a>
+								
+								</div>
+								
+							</div>
+						</div>
+						<div class="panel panel-success">
+							<div class="panel-heading">ПРОЧИТЕННЫЕ КНИГИ</div>
+							<div class="panel-body">
+								<div class="list-group">
+								
+									<a class="list-group-item" href="#">
+										<div class="media">
+											<div class="media-left">
+												<img src="img/red-book.png" class="media-object" style="width:60px">
+											</div>
+											<div class="media-body">
+												<h4 class="media-heading">Tom Sawyer</h4>
+												<p>Tom Sawyer is a boy of about 12 years of age, who resides in the fictional town of St. Petersburg, Missouri, in about the year 1845. Tom Sawyer's best friends include Joe Harper and Huckleberry Finn. In The Adventures of Tom Sawyer, Tom's infatuation with classmate Becky Thatcher is apparent as he tries to intrigue her with his strength, boldness, and handsome looks. He first sees her after he confessed his feelings for Amy Lawrence, one of his classmates. He lives with his half-brother Sid, his cousin Mary, and his stern Aunt Polly. There is no mention of Tom's father. Tom has another aunt, Sally Phelps, who lives very much so farther down the Mississippi.</p>
+											</div>
+										</div>
+									</a>
+
+									<a class="list-group-item" href="#">
+										<div class="media">
+											<div class="media-left">
+												<img src="img/red-book.png" class="media-object" style="width:60px">
+											</div>
+											<div class="media-body">
+												<h4 class="media-heading">Do Androids Dream of Electric Sheep?</h4>
+												<p>In post-apocalyptic 1992 (2021 in later editions),[2] after "World War Terminus", the Earth's dirty atmosphere leads the United Nations to encourage mass emigrations to off-world colonies to preserve humanity's genetic integrity, with the incentive of free personal androids: robot servants identical to humans.</p>
+											</div>
+										</div>
+									</a>
+																	
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Дополнительный столбец -->
+				<div class="col-sm-3 sidenav">
+					<div class="panel-group" id="accordion">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Популярные книги</a>
+								</h4>
+							</div>
+							<div id="collapse1" class="panel-collapse collapse in">
+								<div class="panel-body">
+								
+									<div class="list-group">
+									
+										<a class="list-group-item" href="#">
+											<div class="media">
+												<div class="media-left">
+													<img src="img/red-book.png" class="media-object" style="width:30px">
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading">Java learn</h4>
+												</div>
+											</div>
+										</a>
+
+										<a class="list-group-item" href="#">
+											<div class="media">
+												<div class="media-left">
+													<img src="img/red-book.png" class="media-object" style="width:30px">
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading">SQL learn</h4>
+												</div>
+											</div>
+										</a>
+										
+										<a class="list-group-item" href="#">
+											<div class="media">
+												<div class="media-left">
+													<img src="img/red-book.png" class="media-object" style="width:30px">
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading">Linux learn</h4>
+												</div>
+											</div>
+										</a>
+									
+									</div>
+								
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Новые книги</a>
+								</h4>
+							</div>
+							<div id="collapse2" class="panel-collapse collapse">
+								<div class="panel-body">
+									<div class="list-group">
+									
+										<a class="list-group-item" href="#">
+											<div class="media">
+												<div class="media-left">
+													<img src="img/red-book.png" class="media-object" style="width:30px">
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading">Java learn</h4>
+												</div>
+											</div>
+										</a>
+
+										<a class="list-group-item" href="#">
+											<div class="media">
+												<div class="media-left">
+													<img src="img/red-book.png" class="media-object" style="width:30px">
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading">SQL learn</h4>
+												</div>
+											</div>
+										</a>
+										
+										<a class="list-group-item" href="#">
+											<div class="media">
+												<div class="media-left">
+													<img src="img/red-book.png" class="media-object" style="width:30px">
+												</div>
+												<div class="media-body">
+													<h4 class="media-heading">Linux learn</h4>
+												</div>
+											</div>
+										</a>
+									
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Популярные наборы</a>
+								</h4>
+							</div>
+							<div id="collapse3" class="panel-collapse collapse">
+								<div class="panel-body">
+									<div class="list-group">
+								
+									<a class="list-group-item" href="#">
+										<div class="row">
+											<div class="col-sm-10">Неправильные глаголы</div>
+											<div class="col-sm-2 text-right">120</div>
+										</div>
+									</a>
+
+									<a class="list-group-item" href="#">
+										<div class="row">
+											<div class="col-sm-10">Порядковые числительные</div>
+											<div class="col-sm-2 text-right">25</div>
+										</div>
+									</a>
+
+									<a class="list-group-item" href="#">
+										<div class="row">
+											<div class="col-sm-10">Сининимы</div>
+											<div class="col-sm-2 text-right">350</div>
+										</div>
+									</a>
+									
+								</div>
+								</div>
+							</div>
+						</div>
+					</div> 
+				</div>
+				<!-- Отступ справа -->
+				<div class="col-sm-2 sidenav">
+				</div>
+			</div>
+		</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

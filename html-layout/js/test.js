@@ -1,0 +1,1 @@
+var mas = new Array();

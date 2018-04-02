@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>LargeDictionary</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="starter-template.css" rel="stylesheet"> -->
+		
+		<style>
+			textarea { resize: none; }
+		</style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>                        
+					</button>
+					<a class="navbar-brand" href="main.html">БольшойСловарь</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Словарь <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="dictionary.html">Словарь</a></li>
+								<li><a href="learnset.html">Наборы</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Книги <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="books.html">Книги</a></li>
+								<li><a href="editbook.html">Добавить книгу</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> Меню <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Настройки</a></li>
+								<li><a href="#">Выход</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+    <div class="container-fluid">    
+			<div class="row content">
+				<!-- Отступ слева -->
+				<div class="col-sm-2 sidenav">
+				</div>
+				<!-- Основной столбец -->
+				<div class="col-sm-5 text-left"> 
+					<div class="panel-group">
+						<div class="panel panel-success">
+							<div class="panel-heading">Новая книга</div>
+							<div class="panel-body">
+								<div class="list-group">
+								
+									<div class="media">
+										<div class="media-left">
+											<img src="img/red-book.png" class="media-object" style="width:140px">
+										</div>
+										<div class="media-body">
+											<form class="form-horizontal" action="/action_page.php">
+												<div class="form-group">
+													<label class="control-label col-sm-3" for="name">Наименование:</label>
+													<div class="col-sm-9">
+														<input type="input" class="form-control" id="name" placeholder="Наименование книги">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-sm-3" for="author">Автор:</label>
+													<div class="col-sm-9">
+														<input type="input" class="form-control" id="author" placeholder="Автор книги">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-sm-3" for="source">Источник:</label>
+													<div class="col-sm-9">
+														<input type="input" class="form-control" id="source" placeholder="URL на источник книги">
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+									<p><label class="control-label col-sm-3" for="description">Описание:</label></p>
+									<textarea class="form-control" rows="5" id="description"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Дополнительный столбец -->
+				<div class="col-sm-3 sidenav">
+					<div class="panel-group" id="accordion">
+						<div class="panel panel-success">
+							<div class="panel-heading">Анализ</div>
+						</div>
+						<div class="panel panel-success">
+							<div class="panel-heading">Сохранить</div>
+						</div>
+						<div class="panel panel-success">
+							<div class="panel-heading">К словам</div>
+						</div>
+						<div class="panel panel-success">
+							<div class="panel-heading">Статистика</div>
+							<div class="panel-body">
+								<p>Общее количество слов: 1000</p>
+								<p>Уникальных слов: 100</p>
+								<p>Переведено слов: 95</p>
+							</div>
+						</div>
+					</div> 
+				</div>
+				<!-- Отступ справа -->
+				<div class="col-sm-2 sidenav">
+				</div>
+			</div>
+			
+			<!-- Блок текста -->
+			<div class="row content">
+				<!-- Отступ слева -->
+				<div class="col-sm-2 sidenav">
+				</div>
+				<!-- Основная часть -->
+				<div class="col-sm-8 sidenav">
+					<div class="panel-group">
+						<div class="panel panel-success">
+							<div class="panel-heading">Текст</div>
+								<textarea class="form-control" rows="15" id="text"></textarea>
+							</div>
+						</div>
+						<div class="panel panel-success">
+							<div class="panel-heading">Перведенные слова</div>
+							<table class="table table-hover">
+								<thead>
+									<tr onclick="#">
+										<th>СЛОВО</th>
+										<th>ПЕРЕВОД</th>
+										<th>ЧАСТОТА</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr data-toggle="modal" data-target="#newWord">
+										<td>dictionary</td>
+										<td>словарь</td>
+										<td>1.1</td>
+									</tr>
+									<tr data-toggle="modal" data-target="#newWord">
+										<td>large</td>
+										<td>большой, крупный</td>
+										<td>5.3</td>
+									</tr>
+									<tr data-toggle="modal" data-target="#newWord">
+										<td>book</td>
+										<td>книга</td>
+										<td>4.7</td>
+									</tr>
+									<tr data-toggle="modal" data-target="#newWord">
+										<td>human</td>
+										<td>человеческий, человек</td>
+										<td>4.3</td>
+									</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- Отступ справа -->
+				<div class="col-sm-2 sidenav">
+				</div>
+		</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

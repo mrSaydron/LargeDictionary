@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>LargeDictionary</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="starter-template.css" rel="stylesheet"> -->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>                        
+					</button>
+					<a class="navbar-brand" href="main.html">БольшойСловарь</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Словарь <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="dictionary.html">Словарь</a></li>
+								<li><a href="learnset.html">Наборы</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Книги <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="books.html">Книги</a></li>
+								<li><a href="editbook.html">Добавить книгу</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> Меню <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Настройки</a></li>
+								<li><a href="#">Выход</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+    <div class="container-fluid">    
+			<div class="row content">
+				<!-- Отступ слева -->
+				<div class="col-sm-2 sidenav">
+				</div>
+				<!-- Основной столбец -->
+				<div class="col-sm-5 text-left">
+					<div class="panel-group">
+						<div class="panel panel-success">
+							<div class="panel-heading">Словарь</div>
+							<table class="table table-hover">
+								<thead>
+									<tr onclick="#">
+										<th>
+											<label><input type="checkbox" value=""></label>
+										</th>
+										<th>СЛОВО</th>
+										<th>ПЕРЕВОД</th>
+										<th>ЧАСТОТА</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<label><input type="checkbox" value=""></label>
+										</td>
+										<td data-toggle="modal" data-target="#newWord">dictionary</td>
+										<td>словарь</td>
+										<td>1.1</td>
+									</tr>
+									<tr>
+										<td>
+											<label><input type="checkbox" value=""></label>
+										</td>
+										<td data-toggle="modal" data-target="#newWord">large</td>
+										<td>большой, крупный</td>
+										<td>5.3</td>
+									</tr>
+									<tr>
+										<td>
+											<label><input type="checkbox" value=""></label>
+										</td>
+										<td data-toggle="modal" data-target="#newWord">book</td>
+										<td>книга</td>
+										<td>4.7</td>
+									</tr>
+									<tr>
+										<td>
+											<label><input type="checkbox" value=""></label>
+										</td>
+										<td data-toggle="modal" data-target="#newWord">human</td>
+										<td>человеческий, человек</td>
+										<td>4.3</td>
+									</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- Дополнительный столбец -->
+				<div class="col-sm-3 sidenav">
+					<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="слово">
+									<div class="input-group-btn">
+										<button class="btn btn-default" type="submit">
+											<i class="glyphicon glyphicon-search"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="panel panel-success">
+							<div class="panel-heading" data-toggle="modal" data-target="#newWord">Добавить слово</div>
+						</div>
+						<div class="panel panel-success">
+							<div class="panel-heading">Удалить слова</div>
+						</div>
+						<div class="panel panel-success">
+							<div class="panel-heading">Новый набор</div>
+						</div>
+						<div class="panel panel-success">
+							<div class="panel-heading">Учить набор</div>
+						</div>
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Добавить в набор</a>
+								</h4>
+							</div>
+							<div id="collapse3" class="panel-collapse collapse">
+								<div class="panel-body">
+									<div class="list-group">
+										<a class="list-group-item" href="#">Неправильные глаголы</a>
+										<a class="list-group-item" href="#">Порядковые числительные</a>
+										<a class="list-group-item" href="#">Синонимы</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Отступ справа -->
+				<div class="col-sm-2 sidenav">
+				</div>
+			</div>
+		</div>
+		
+		<!-- Окно создания/редактирования слова -->
+		<div id="newWord" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+			
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Создать слово</h4>
+					</div>
+					<div class="modal-body">
+						<!-- Форма -->
+						<form class="form-horizontal" action="#">
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="email">Слово:</label>
+								<div class="col-sm-10">
+									<input type="input" class="form-control" id="word" placeholder="Слово">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="pwd">Перевод:</label>
+								<div class="col-sm-10"> 
+									<input type="input" class="form-control" id="translation" placeholder="Введите перевод">
+								</div>
+							</div>
+							<div class="form-group"> 
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="submit" class="btn btn-default">Сохранить</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<!-- Предупреждение -->
+						<div class="alert alert-warning">
+							Перевод пользователя. <a href="#" class="alert-link">Вернуть общий пeревод</a>.
+						</div>
+					</div>
+			</div>
+		</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
